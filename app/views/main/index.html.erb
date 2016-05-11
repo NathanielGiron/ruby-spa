@@ -1,6 +1,8 @@
 <h2>Creature</h2>
 
-<% @creatures.each do |creature| %>
-	<h2><%= creature.name %></h2>
-	<p><%= creature.description %>
-<% end %>
+<section id="content-section">
+	<% @creatures.each do |creature| %>
+		<a href="/creature/<%= creature.id %>" class="show-link"><h2><%= creature.name %></h2></a>
+		<p><%= creature.description %></p>
+	<% end %>
+</section>
